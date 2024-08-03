@@ -29,15 +29,13 @@ class Solution{
     static int evenlyDivides(int N){
         // code here
         int count=0;
-        int num = N;
+        int Onum = N;
         while(N>0){
-            int digit = N%10;
-            N=N/10;
-            if (digit!=0 && num%digit==0)
-            {
+            int lastDigit = N % 10;
+            if(lastDigit!=0 && Onum % lastDigit == 0){
                 count++;
             }
+            N = N/10;
     }
-            return count;
-}
-}
+    return count;
+}}
